@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QRScanner</string>
+    <string name="qcode_empty">Qcode is empty</string>
+</resources>

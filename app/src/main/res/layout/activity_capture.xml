@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/whole_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <view.ScanBoxView
+        android:id="@+id/capture_crop_view_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:qrcv_animTime="1000"
+        app:qrcv_borderColor="@color/colorPrimary"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/colorPrimary"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="2dp"
+        app:qrcv_customGridScanLineDrawable="@drawable/custom_grid_scan_line"
+        app:qrcv_isCenterVertical="true"
+        app:qrcv_isScanLineReverse="true"
+        app:qrcv_maskColor="@color/colorBlack50"
+        app:qrcv_rectWidth="@dimen/capture_rectWidth"
+        app:qrcv_scanLineColor="@android:color/holo_green_dark"
+        app:qrcv_scanLineMargin="0dp"
+        app:qrcv_scanLineSize="0.5dp"
+        app:qrcv_toolbarHeight="@dimen/space_16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/flash_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="支持双指缩放"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:id="@+id/flash_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:src="@mipmap/ic_flash_off"
+        />
+
+    <TextView
+        android:id="@+id/test_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="保存"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:id="@+id/test_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/test_save"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="相册"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:id="@+id/test_opencv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="openCV"
+        android:textColor="#000"
+        />
+
+    <RelativeLayout
+        android:id="@+id/test_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/test_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
